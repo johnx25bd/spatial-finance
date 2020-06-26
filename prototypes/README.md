@@ -20,41 +20,4 @@ A network of validator enclaves. These
 
 A contract is developed that holds funds and disburses on an interval based on the relative 'weight' of the image submitted.
 
-Funds are disbursed to the beneficiary address designated in the geojson `properties` object in the service endpoint:
-
-```javascript
-
-const tx = {
-    from: "0x1",
-    to: "0x2",
-    parameters: {
-        weight: 0.32,
-        duration: 143234224, // (number of blocks? milliseconds.)
-    }
-}
-
-```
-
-And solidity:
-
-```javascript
-
-// use as a require
-function require(duration) {
-    if (network.block > lastClaim + 200) { // something with duration too? Can only claim so often
-        // this means they're eligible - this could be a require
-        // calculate payment amount
-        _;
-    }
-}
-
-function assessChange(weight, duration, beneficiary) {
-
-}
-    
-
-```
-
-As 
-
-Analytics algorithms 
+Funds are disbursed to the beneficiary address designated in the geojson `properties` object in the service endpoint.
